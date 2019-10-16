@@ -29,6 +29,8 @@ function parsePostData(ctx){
     return new Promise((resolve,reject)=>{
         try{
             let postdata="";
+            const res = ctx.request;
+            console.log(res, 'reqreqreq')
             ctx.req.on('data',(data)=>{
                 postdata += data
             })
